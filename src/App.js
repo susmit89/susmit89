@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import About from "./components/about";
 import Contact from "./components/contact";
+import BlogForm from "./components/posts";
 
 class App extends Component {
   state = {};
@@ -21,6 +22,7 @@ class App extends Component {
         <NavBar user={this.state.user} />
         <main className="container">
           <Switch>
+            <Route path="/blogs/:id" component={BlogForm} />
             <Route path="/blogs" render={(props) => <Blogs {...props} />} />
             <Route path="/about" component={About}></Route>
             <Route path="/contact" component={Contact}></Route>

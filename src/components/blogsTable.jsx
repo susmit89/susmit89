@@ -13,7 +13,6 @@ class BlogsTable extends Component {
     },
     { path: "topic.name", label: "Topic" },
     { path: "publishDate", label: "publishDate" },
-    { path: "dailyRentalRate", label: "Rate" },
     {
       key: "like",
       content: (blog) => (

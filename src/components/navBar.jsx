@@ -11,25 +11,31 @@ const NavBar = ({ user }) => {
         className="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
-          <NavLink className=" nav-item nav-link" to="/blogs">
-            Blogs
-          </NavLink>
-          <NavLink className="nav-item nav-link" to="/about">
-            About
-          </NavLink>
-          <NavLink className="nav-item nav-link" to="/contact">
-            Contact
-          </NavLink>
-        </div>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          <li class="nav-item">
+            <NavLink className="nav-link" to="/blogs">
+              Blogs
+            </NavLink>
+          </li>
+          <li class="nav-item">
+            <NavLink className="nav-link" to="/about">
+              About
+            </NavLink>
+          </li>
+          <li class="nav-item">
+            <NavLink className="nav-link" to="/contact">
+              Contact
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </nav>
   );

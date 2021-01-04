@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { getBlogs } from "../services/posts";
-import { getTopics } from "../services/topics";
+import { getBlogs } from "../services/blogService";
+import { getTopics } from "../services/topicService";
 //import Like from "./common/like";
 
 //import { getblogs, deleteblog } from "../services/blogService";
@@ -23,20 +23,20 @@ class Blogs extends Component {
     selectedTopic: null,
     sortColumn: { path: "title", order: "asc" },
   };
-
+  /*
   componentDidMount() {
     const topics = [{ _id: "", name: "All Topics" }, ...getTopics()];
     this.setState({ blogs: getBlogs(), topics });
   }
+*/
 
-  /*
   async componentDidMount() {
     const { data } = await getTopics();
+
     const topics = [{ _id: "", name: "All Topics" }, ...data];
-    const { data: blogs } = await getblogs();
+    const { data: blogs } = await getBlogs();
     this.setState({ blogs, topics });
   }
-  */
 
   handleLike = (blog) => {
     const blogs = [...this.state.blogs];
